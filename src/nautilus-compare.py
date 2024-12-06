@@ -72,7 +72,7 @@ class NautilusCompareExtension(GObject.GObject, Nautilus.MenuProvider):
 		else:
 			return False
 
-	def get_file_items(self, window, files):
+	def get_file_items(self, files):
 		'''Main method to detect what choices should be offered in the context menu'''
 		paths = []
 		for file in files:
