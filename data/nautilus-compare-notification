@@ -1,6 +1,6 @@
-Name: Nautilus Compare extension requires restarting file manager
+Name: Restart Nautilus to update context menu
 Priority: High
 Terminal: False
 DontShowAfterReboot: True
 DisplayIf: pgrep -x nautilus
-Description: Nautilus Compare extension has been installed. Restart Nautilus file manager to make new context menu items 'Compare' and 'Compare Later' appear (hint: 'nautilus -q' in terminal). Or if you prefer, a session restart will be more than enough. Note that you also have to restart Nautilus after using 'nautilus-compare-preferences' to change the 'diff' tools used for the comparison.
+Description: Nautilus Compare extension has been installed. Restart Nautilus file manager to make new context menu items "Compare" and "Compare Later" appear (hint: `nautilus -q` in terminal). Or if you prefer, a session restart will be more than enough. You also have to restart Nautilus after using `nautilus-compare-preferences` to change diff tools for the comparison.

@@ -4,6 +4,7 @@ Name=Nautilus Compare Extension Preferences
 Type=Application
 GenericName=Preferences for Nautilus Compare Extension
 Icon=gtk-preferences
+Keywords=filemanager;diff;compare;preferences;
 Categories=Settings;
 X-Ubuntu-Gettext-Domain=nautilus-compare
 Exec=nautilus-compare-preferences

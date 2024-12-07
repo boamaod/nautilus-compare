@@ -18,10 +18,10 @@
 
 import sys
 import os
-import urllib.request, urllib.parse, urllib.error
 import gettext
 import locale
 
+from urllib.parse import unquote
 from gi.repository import Nautilus, GObject, Gio
 
 sys.path.insert(0, "/usr/share/nautilus-compare")
@@ -37,7 +37,7 @@ class NautilusCompareExtension(GObject.GObject, Nautilus.MenuProvider):
 	def __init__(self):
 		'''Load config'''
 
-		GObject.Object.__init__(self)
+		super().__init__()
 
 		self.config = utils.NautilusCompareConfig()
 		self.config.load()
@@ -78,9 +78,9 @@ class NautilusCompareExtension(GObject.GObject, Nautilus.MenuProvider):
 		for file in files:
 			if self.valid_file(file):
 				if self.config.diff_engine in utils.URI_COMPAT_ENGINES:
-					path = urllib.parse.unquote(file.get_uri())
+					path = unquote(file.get_uri())
 				else:
-					path = urllib.parse.unquote(file.get_uri()[7:])
+					path = unquote(file.get_uri()[7:])
 				paths.append(path)
 
 		# no files selected
