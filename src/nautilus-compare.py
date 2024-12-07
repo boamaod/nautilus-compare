@@ -37,7 +37,7 @@ class NautilusCompareExtension(GObject.GObject, Nautilus.MenuProvider):
 	def __init__(self):
 		'''Load config'''
 
-		super().__init__()
+		GObject.GObject.__init__(self)
 
 		self.config = utils.NautilusCompareConfig()
 		self.config.load()
