@@ -1,9 +1,9 @@
 
 [Desktop Entry]
-Name=Nautilus Compare Extension Preferences
+Name=Nautilus Compare Preferences
 Type=Application
 GenericName=Preferences for Nautilus Compare Extension
-Icon=gtk-preferences
+Icon=preferences-other
 Keywords=filemanager;diff;compare;preferences;
 Categories=Settings;
 X-Ubuntu-Gettext-Domain=nautilus-compare
