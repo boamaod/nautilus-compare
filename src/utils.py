@@ -109,7 +109,11 @@ class NautilusCompareConfig:
 		'''Adds predefined engines which are installed, but missing in engines list.'''
 		system_utils = []
 		for path in COMPARATOR_PATHS:
-			system_utils += os.listdir(path)
+			try:
+				system_utils += os.listdir(path)
+			except FileNotFoundError:
+				# '/usr/local/bin' might not exist, so just ignore it
+				pass
 		for engine in PREDEFINED_ENGINES:
 			if engine not in self.engines and engine in system_utils:
 				self.engines.append(engine)
