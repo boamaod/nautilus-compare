@@ -1,0 +1,29 @@
+.TH NAUTILUS-COMPARE-PREFERENCES 1 "December 20, 2024"
+.SH NAME
+nautilus-compare-preferences \- Preferences dialog for Nautilus Compare extension
+.SH SYNOPSIS
+.B nautilus-compare-preferences
+.SH DESCRIPTION
+A graphical preferences dialog for the
+.B Nautilus Compare extension
+simplifies choosing diff applications to be started via the context menu
+of the
+.B Nautilus file manager.
+.PP
+Using the preferences dialog you can select and switch between various comparison
+tools to perform diffs, three-way diffs and multi-diffs. Known diff applications
+are detected from common install locations and the preferences dialog is
+pre-filled with potential names for comparator tools.
+.PP
+To apply changes made in the preferences dialog, a restart of the Nautilus file
+manager is required. Run the command `nautilus -q` to quit Nautilus and restart
+it to reflect the updated settings.
+.PP
+The extension and the preferences dialog were written in Python and GTK+.
+.SH SEE ALSO
+.BR nautilus (1)
+.br
+.SH AUTHOR
+.nh
+The Nautilus Compare extension and this manual page were created by Märt Põder <tramm@infoaed.ee>, inspired by the
+discontiued diff-ext extension in 2011.
