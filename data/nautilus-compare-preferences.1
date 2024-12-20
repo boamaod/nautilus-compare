@@ -4,26 +4,39 @@ nautilus-compare-preferences \- Preferences dialog for Nautilus Compare extensio
 .SH SYNOPSIS
 .B nautilus-compare-preferences
 .SH DESCRIPTION
-A graphical preferences dialog for the
-.B Nautilus Compare extension
-simplifies choosing diff applications to be started via the context menu
-of the
-.B Nautilus file manager.
+A graphical preferences dialog for the \fINautilus Compare\fP
+simplifies choosing diff applications started via the context menu
+of the \fINautilus file manager\fP.
 .PP
-Using the preferences dialog you can select and switch between various comparison
-tools to perform diffs, three-way diffs and multi-diffs. Known diff applications
-are detected from common install locations and the preferences dialog is
-pre-filled with potential names for comparator tools.
+Using the preferences dialog you can select and switch between comparison
+tools to perform diffs, three-way diffs and multi-diffs. Known diff tools
+are detected from common install locations at \fI/usr/[local/]bin\fP
+and the preferences dialog is pre-filled with potential names for comparators.
 .PP
-To apply changes made in the preferences dialog, a restart of the Nautilus file
-manager is required. Run the command `nautilus -q` to quit Nautilus and restart
-it to reflect the updated settings.
+To apply the changes, a restart of the Nautilus file manager is required.
+Run the command \fI"nautilus -q"\fP to quit Nautilus and restart it to reflect
+the updated settings.
 .PP
 The extension and the preferences dialog were written in Python and GTK+.
+.SH FILES
+.I /etc/nautilus-compare.conf
+.RS
+System wide preferences file.
+.RE
+.I $XDG_CONFIG_HOME/nautilus-compare.conf
+.RS
+Local preferences file.
+.RE
 .SH SEE ALSO
 .BR nautilus (1)
 .br
 .SH AUTHOR
 .nh
-The Nautilus Compare extension and this manual page were created by Märt Põder <tramm@infoaed.ee>, inspired by the
-discontiued diff-ext extension in 2011.
+Written by
+.MT tramm@\:infoaed.ee
+Märt Põder
+.ME
+.UE ,
+inspired by the discontiued
+.I diff-ext
+extension in 2011.
